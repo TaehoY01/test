@@ -1,0 +1,13 @@
+// Custom JavaScript can go here.
+// For example, smooth scrolling or interactive elements.
+
+// Example: Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

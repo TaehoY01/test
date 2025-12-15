@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #007bff; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary gray */
+    --light-color: #f8f9fa; /* Bootstrap light */
+    --dark-color: #343a40; /* Bootstrap dark */
+    --font-family-sans-serif: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Navbar adjustments */
+.navbar {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important; /* Ensure hover color is primary */
+}
+
+/* Jumbotron/Header section */
+.jumbotron {
+    background-color: var(--primary-color) !important; /* Override Bootstrap bg-primary if needed */
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh; /* Ensure it takes at least 50% of viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,123,255,0.8), rgba(2,117,216,0.8));
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron p.lead {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.jumbotron .btn-light {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.jumbotron .btn-light:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section headings */
+h2 {
+    font-weight: 700;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 3rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Cards for projects */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color) !important;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
